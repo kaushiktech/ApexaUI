@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35506.116 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApexApi", "ApexApi.csproj", "{A592F73E-477D-43E6-9608-5A6A25682336}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApexApi.Data", "..\ApexApi.Data\ApexApi.Data.csproj", "{BE5C98E4-0962-4C92-B418-09FC513A4AA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApexApi.Models", "..\ApexApi.Models\ApexApi.Models.csproj", "{DBA35851-1488-4A46-9654-8EEB5CFCEC7C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A592F73E-477D-43E6-9608-5A6A25682336}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A592F73E-477D-43E6-9608-5A6A25682336}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A592F73E-477D-43E6-9608-5A6A25682336}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A592F73E-477D-43E6-9608-5A6A25682336}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE5C98E4-0962-4C92-B418-09FC513A4AA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE5C98E4-0962-4C92-B418-09FC513A4AA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE5C98E4-0962-4C92-B418-09FC513A4AA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE5C98E4-0962-4C92-B418-09FC513A4AA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBA35851-1488-4A46-9654-8EEB5CFCEC7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBA35851-1488-4A46-9654-8EEB5CFCEC7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBA35851-1488-4A46-9654-8EEB5CFCEC7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBA35851-1488-4A46-9654-8EEB5CFCEC7C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
