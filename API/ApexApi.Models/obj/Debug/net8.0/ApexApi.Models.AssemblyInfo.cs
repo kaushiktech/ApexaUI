@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ApexApi.Models")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1eabb2a2ddb4318fca2a9790e27d00afdabde26d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e48af29e44f17acef2bd92635d0bb07fae6cfa06")]
 [assembly: System.Reflection.AssemblyProductAttribute("ApexApi.Models")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ApexApi.Models")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

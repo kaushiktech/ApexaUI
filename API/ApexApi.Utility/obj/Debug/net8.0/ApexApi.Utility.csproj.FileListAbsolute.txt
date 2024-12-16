@@ -1,0 +1,12 @@
+C:\DEV_AREA\ApexaUI\API\ApexApi.Utility\bin\Debug\net8.0\ApexApi.Utility.deps.json
+C:\DEV_AREA\ApexaUI\API\ApexApi.Utility\bin\Debug\net8.0\ApexApi.Utility.dll
+C:\DEV_AREA\ApexaUI\API\ApexApi.Utility\bin\Debug\net8.0\ApexApi.Utility.pdb
+C:\DEV_AREA\ApexaUI\API\ApexApi.Utility\obj\Debug\net8.0\ApexApi.Utility.GeneratedMSBuildEditorConfig.editorconfig
+C:\DEV_AREA\ApexaUI\API\ApexApi.Utility\obj\Debug\net8.0\ApexApi.Utility.AssemblyInfoInputs.cache
+C:\DEV_AREA\ApexaUI\API\ApexApi.Utility\obj\Debug\net8.0\ApexApi.Utility.AssemblyInfo.cs
+C:\DEV_AREA\ApexaUI\API\ApexApi.Utility\obj\Debug\net8.0\ApexApi.Utility.csproj.CoreCompileInputs.cache
+C:\DEV_AREA\ApexaUI\API\ApexApi.Utility\obj\Debug\net8.0\ApexApi.Utility.sourcelink.json
+C:\DEV_AREA\ApexaUI\API\ApexApi.Utility\obj\Debug\net8.0\ApexApi.Utility.dll
+C:\DEV_AREA\ApexaUI\API\ApexApi.Utility\obj\Debug\net8.0\refint\ApexApi.Utility.dll
+C:\DEV_AREA\ApexaUI\API\ApexApi.Utility\obj\Debug\net8.0\ApexApi.Utility.pdb
+C:\DEV_AREA\ApexaUI\API\ApexApi.Utility\obj\Debug\net8.0\ref\ApexApi.Utility.dll

@@ -27,3 +27,5 @@ C:\DEV_AREA\ApexaUI\API\ApexApi.Data\obj\Debug\net8.0\refint\ApexApi.Data.dll
 C:\DEV_AREA\ApexaUI\API\ApexApi.Data\obj\Debug\net8.0\ApexApi.Data.pdb
 C:\DEV_AREA\ApexaUI\API\ApexApi.Data\obj\Debug\net8.0\ApexApi.Data.genruntimeconfig.cache
 C:\DEV_AREA\ApexaUI\API\ApexApi.Data\obj\Debug\net8.0\ref\ApexApi.Data.dll
+C:\DEV_AREA\ApexaUI\API\ApexApi.Data\bin\Debug\net8.0\ApexApi.Utility.dll
+C:\DEV_AREA\ApexaUI\API\ApexApi.Data\bin\Debug\net8.0\ApexApi.Utility.pdb

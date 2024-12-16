@@ -9,6 +9,7 @@
       "ApexApi.Data/1.0.0": {
         "dependencies": {
           "ApexApi.Models": "1.0.0",
+          "ApexApi.Utility": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.11",
           "Microsoft.EntityFrameworkCore": "8.0.11",
           "Microsoft.EntityFrameworkCore.InMemory": "8.0.11",
@@ -600,6 +601,14 @@
             "fileVersion": "1.0.0.0"
           }
         }
+      },
+      "ApexApi.Utility/1.0.0": {
+        "runtime": {
+          "ApexApi.Utility.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -911,6 +920,11 @@
       "hashPath": "system.threading.channels.6.0.0.nupkg.sha512"
     },
     "ApexApi.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ApexApi.Utility/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

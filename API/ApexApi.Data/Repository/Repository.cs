@@ -20,6 +20,11 @@ namespace ApexApi.Data.Repository
             dbSet.Add(entity);
         }
 
+        public void Update(T entity)
+        {
+            dbSet.Update(entity);
+        }
+
         public IEnumerable<T> GetAll(string? includeProps=null)
         {
             IQueryable<T> results = dbSet;

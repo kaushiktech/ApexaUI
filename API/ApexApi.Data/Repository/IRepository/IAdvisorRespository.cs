@@ -4,7 +4,8 @@ namespace ApexApi.Data.Repository.IRepository
 {
     public interface IAdvisorRepository : IRepository<Advisor>
     {
-        void Update(Advisor advisor);
+        void Add(Advisor entity);
+        void Update(Advisor entity);
         void Save();
     }
 }

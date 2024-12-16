@@ -18,9 +18,9 @@ namespace ApexApi.Data.Data
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Advisor>().HasData
                 (
-                    new Advisor { Id = 1, FullName = "Action",SIN=123123123},
-                    new Advisor { Id = 2, FullName = "SciFi", SIN = 133123323 },
-                    new Advisor { Id = 3, FullName = "History", SIN = 143123143 }
+                    new Advisor { Id = 1, FullName = "Action", SIN = "123123123" },
+                    new Advisor { Id = 2, FullName = "SciFi", SIN = "133123323" },
+                    new Advisor { Id = 3, FullName = "History", SIN = "143123143" }
                 );
         }
     }  

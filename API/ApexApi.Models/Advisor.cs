@@ -12,14 +12,14 @@ namespace ApexApi.Models
     {
         [Key]
         public int Id { get; set; }
-        [Required,MaxLength(255,ErrorMessage ="Maximum length of Full Name can be only 255 charachters")]
+        [Required, MaxLength(255,ErrorMessage ="Maximum length of Full Name can be only 255 charachters")]
         public string FullName { get; set; }
-        [Length(maximumLength: 9, minimumLength: 9, ErrorMessage = "Length of SIN can be only 9 numbers")]
-        public int SIN { get; set; }
+        [Required, Length(maximumLength: 9, minimumLength: 9, ErrorMessage = "Length of SIN can be only 9 numbers")]
+        public string SIN { get; set; }
         [MaxLength(255,ErrorMessage ="Maximum length of Address can be only 255 charachters")]
         public string? Address { get; set; }
         [Length(maximumLength:10,minimumLength:10, ErrorMessage = "Length of phone number can be only 10 numbers")]
-        public int? PhoneNumber { get; set; }
+        public string? PhoneNumber { get; set; }
         [JsonIgnore]
         public int HealthStatus { get; set; }
         [NotMapped]

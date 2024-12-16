@@ -1,5 +1,6 @@
 ﻿using ApexApi.Data.Data;
 using ApexApi.Models;
+using ApexApi.Utility;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -17,9 +18,9 @@ namespace ApexApi.Data
             using (var context = new ApplicationDbContext(serviceProvider.GetRequiredService<DbContextOptions<ApplicationDbContext>>()))
             {
                 context.Advisors.AddRange(
-                    new Advisor { Id = 1, FullName = "Action", SIN = 123123123 },
-                    new Advisor { Id = 2, FullName = "SciFi", SIN = 133123323 },
-                    new Advisor { Id = 3, FullName = "History", SIN = 143123143 }
+                    new Advisor { Id = 1, FullName = "ABC", SIN = "123123123", HealthStatus = ModelHelper.GenerateHealthStatus() },
+                    new Advisor { Id = 2, FullName = "DEF", SIN = "133123323", HealthStatus = ModelHelper.GenerateHealthStatus() },
+                    new Advisor { Id = 3, FullName = "GHI", SIN = "143123143", HealthStatus = ModelHelper.GenerateHealthStatus() }
                     );
                 context.SaveChanges();
             }

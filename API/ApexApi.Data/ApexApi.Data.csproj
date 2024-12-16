@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ApexApi.Models\ApexApi.Models.csproj" />
+    <ProjectReference Include="..\ApexApi.Utility\ApexApi.Utility.csproj" />
   </ItemGroup>
 
 </Project>
