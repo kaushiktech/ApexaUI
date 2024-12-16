@@ -2,7 +2,7 @@
 
 module.exports = function (environment) {
   const ENV = {
-    modulePrefix: 'apexa-ui',
+    modulePrefix: 'ui',
     environment,
     rootURL: '/',
     locationType: 'history',

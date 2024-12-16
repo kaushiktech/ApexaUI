@@ -1,5 +1,5 @@
-import Application from 'apexa-ui/app';
-import config from 'apexa-ui/config/environment';
+import Application from 'ui/app';
+import config from 'ui/config/environment';
 import * as QUnit from 'qunit';
 import { setApplication } from '@ember/test-helpers';
 import { setup } from 'qunit-dom';

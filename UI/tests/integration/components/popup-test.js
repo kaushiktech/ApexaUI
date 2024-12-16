@@ -1,24 +1,24 @@
 import { module, test } from 'qunit';
-import { setupRenderingTest } from 'apexa-ui/tests/helpers';
+import { setupRenderingTest } from 'ui/tests/helpers';
 import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 
-module('Integration | Component | header-nav', function (hooks) {
+module('Integration | Component | popup', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.set('myAction', function(val) { ... });
 
-    await render(hbs`<HeaderNav />`);
+    await render(hbs`<Popup />`);
 
     assert.dom().hasText('');
 
     // Template block usage:
     await render(hbs`
-      <HeaderNav>
+      <Popup>
         template block text
-      </HeaderNav>
+      </Popup>
     `);
 
     assert.dom().hasText('template block text');

@@ -1,8 +1,59 @@
-	
-@import 'bootstrap';
+@import "node_modules/bootstrap/scss/bootstrap";
 .logo-image{
     background-image:url('/assets/images/apexa_logo.jpg')
 }
 .active{
     font-weight:bold;
 }
+
+#popup-overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.685);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 9998;
+    display: block;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+.popup {
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    top: 50%;
+    left: 50%;
+    user-select: none;
+    background-color:white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
+.popup-footer{
+    background: #f2f2f2;
+    padding: 0.75rem;
+    text-align: center;
+}
+.popup-header{
+    justify-content: center;
+    background: #f2f2f2;
+    display: flex;
+    padding: 2rem 1rem;
+    .close{
+        position: absolute;
+        right: 15px;
+        margin-top: -15px;
+        cursor: pointer;
+    }
+}
+.popup-content{
+    padding:30px;
+    label{
+        font-weight: normal;
+        font-size: 13px;
+        margin-bottom: .5rem;
+    }
+}
+
+
+
