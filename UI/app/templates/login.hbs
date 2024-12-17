@@ -1,0 +1,30 @@
+{{page-title "Login"}}
+
+
+    <div class="login">
+        <form >
+      <div class="login-header">
+        Login
+      </div>
+      <div class="login-content">
+        <div class="form-group">
+          <label>Username</label>
+          <input type="text" class="form-control" name="username" {{on "change" (fn this.update "username")}} />
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" class="form-control" name="password" autocomplete="on" {{on "change" (fn this.update "password")}} />
+        </div>
+      </div>
+      <div class="login-footer">
+        <input {{on "click" this.login}} type="button" class="btn btn-secondary" value="Login"/>
+        {{#if this.error}}
+        <div class="error-message">
+        <span class="error-text">Login failed: Reason - {{this.error}}</span>
+        </div>
+        {{/if}}
+      </div>
+      </form>
+    </div>
+
+{{outlet}}

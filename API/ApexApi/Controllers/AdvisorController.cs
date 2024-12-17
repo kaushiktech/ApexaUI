@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ApexApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api")]
     [ApiController]
     public class AdvisorController : Controller
     {
@@ -16,24 +16,35 @@ namespace ApexApi.Controllers
             _repository = repository;
         }
         [HttpGet]
-        [Route("GetAllAdvisors")]
-        public async Task<IActionResult> GetAdvisors()
+        [Route("advisors/{id?}")]
+        public async Task<IActionResult> GetAdvisor(long? id)
         {
-            var objAdvisorList = _repository.GetAll();
-            return Json(new { data = objAdvisorList });
-        }
-        [HttpGet]
-        [Route("GetAdvisor")]
-        public async Task<IActionResult> GetAdvisor(long id)
-        {
-            var objAdvisor = _repository.Get(adv => adv.Id == id);
-            if (objAdvisor == null)
-                return NotFound(new { Status = "Error", Message = "Advisor not found!" });
+            if (id == null || id == 0)
+            {
+                var objAdvisorList = _repository.GetAll();
+                foreach(Advisor advisor in objAdvisorList)
+                {
+                    advisor.SIN = advisor.SIN.MaskAllButLast(3, 'X');
+                    advisor.PhoneNumber = advisor.PhoneNumber.MaskAllButLast(3, 'X');
+                }
+                return Json(new { advisors = objAdvisorList });
+            }
             else
-                return Json(new { data = objAdvisor });
+            {
+                var objAdvisor = _repository.Get(adv => adv.Id == id);
+                
+                if (objAdvisor == null)
+                    return NotFound(new { Status = "Error", Message = "Advisor not found!" });
+                else
+                {
+                    objAdvisor.SIN = objAdvisor.SIN.MaskAllButLast(3, 'X');
+                    objAdvisor.PhoneNumber = objAdvisor.PhoneNumber.MaskAllButLast(3, 'X');
+                    return Json(new { advisor = objAdvisor });
+                }
+            }
         }
         [Authorize(AuthenticationSchemes = "Bearer")]
-        [Route("DeleteAdvisor")]
+        [Route("advisors/{id}")]
         [HttpDelete]
         public IActionResult Delete(long id)
         {
@@ -52,7 +63,7 @@ namespace ApexApi.Controllers
             }
         }
         [Authorize(AuthenticationSchemes = "Bearer")]
-        [Route("CreateAdvisor")]
+        [Route("advisors")]
         [HttpPost]
         public IActionResult Create(Advisor obj)
         {
@@ -66,8 +77,8 @@ namespace ApexApi.Controllers
                 return BadRequest();
         }
         [Authorize(AuthenticationSchemes = "Bearer")]
-        [Route("UpdateAdvisor")]
-        [HttpPut]
+        [Route("advisors")]
+        [HttpPatch]
         public IActionResult Edit(UpdateAdvisor obj)
         {
             if (ModelState.IsValid)

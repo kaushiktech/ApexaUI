@@ -34,6 +34,20 @@ builder.Services.AddAuthentication(options =>
          IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(builder.Configuration["APEXA_JWT_KEY"]))
      };
  });
+if (builder.Environment.IsDevelopment())
+{
+    builder.Services.AddCors(options =>
+    {
+        options.AddPolicy("AllowAllOrigins",
+            policyBuilder => policyBuilder.AllowAnyHeader()
+                .AllowAnyMethod()
+                .AllowAnyOrigin()
+                //.AllowCredentials()
+                .SetIsOriginAllowed(_ => true)
+        );
+    });
+}
+
 
 builder.Services.AddScoped<IAdvisorRepository, AdvisorRepository>();
 builder.Services.AddScoped<AdminInitializer>();
@@ -78,7 +92,7 @@ using (var serviceScope = app.Services.CreateScope())
     bool doSeedData = false;
     bool.TryParse(app.Configuration["SeedData"]?.ToString(), out doSeedData);
     //Seed Data
-    if(doSeedData)
+    if (doSeedData)
         DataGenerator.Initialize(services);
     //Seed 'admin' username - Remember to add environment variable APEXA_ADMIN_PASSWORD 
     adminInit.RegisterAdmin();
@@ -88,7 +102,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+if (app.Environment.IsDevelopment())
+{
+    app.UseCors("AllowAllOrigins");
+}
 app.UseHttpsRedirection();
 
 app.UseAuthorization();

@@ -5,21 +5,21 @@ import { action } from '@ember/object';
 export default class HeaderNav extends Component {
   @service router;
   @service PopUp;
-  myFun() {
-    this.testFun();
-  }
+  @service session;
+
   get activeRoute() {
     return this.router.currentRouteName == null
       ? ''
       : this.router.currentRouteName;
+  }
+  @action logout() {
+    console.log(this.session.isAuthenticated);
+    this.session.invalidate();
   }
   @action redirect(route) {
     this.router.transitionTo(route);
   }
   @action openPopup() {
     this.PopUp.updateIt(true);
-  }
-  @action testFun() {
-    console.log('omg');
   }
 }

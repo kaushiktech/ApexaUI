@@ -7,6 +7,7 @@ using System.Text.Json.Serialization;
 
 namespace ApexApi.Models
 {
+    
     [Index(nameof(SIN), IsUnique = true)]
     public class Advisor
     {

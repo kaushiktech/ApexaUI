@@ -1,0 +1,50 @@
+{{page-title "Index"}}
+<div class="container">
+  <h2>Advisors <LinkTo @route="advisor.edit" @model="new"><button class="btn btn-secondary" type="button">Create<i class="px-1 fa-solid fa-plus"></i></button></LinkTo></h2> 
+
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Sin</th>
+          <th>Health Status</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        {{#each this.model as |advisor|}}
+          <tr>
+            <td>{{advisor.fullName}}</td>
+            <td>{{advisor.sin}}</td>
+            <td><Healthbar @healthStatus={{advisor.displayHealthStatus}} /></td>
+            <td>
+                <LinkTo @route="advisor.view" @model="{{advisor.id}}">
+                <button
+                type="button"
+                class="btn btn-secondary"
+              >View</button>
+              </LinkTo>
+              {{#if this.session.isAuthenticated}}
+              <button
+                type="button"
+                class="btn btn-secondary"
+              >Edit</button>
+              
+              <button {{on "click" (fn this.deleteAdvisor advisor)}}
+                type="button"
+                class="btn btn-danger"
+              >Delete</button>
+              {{/if}}
+            </td>
+          </tr>
+        {{/each}}
+        
+      </tbody>
+    </table>
+  </div>
+</div>
+<script>
+
+</script>

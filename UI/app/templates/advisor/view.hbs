@@ -1,0 +1,18 @@
+{{page-title "View"}}
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Advisor Details</h5>
+        <p class="card-text">Name: {{this.model.fullName}}</p>
+        <p class="card-text">Sin: {{this.model.sin}}</p>
+        <p class="card-text">Address: {{this.model.address}}</p>
+        <p class="card-text">Phone Number: {{this.model.phoneNumber}}</p>
+        <p class="card-text"><span style="margin-right: 10px">Health Status:</span> <Healthbar  @healthStatus={{this.model.displayHealthStatus}}/></p>
+        <LinkTo @route="advisor"><button class="btn btn-secondary" type="button">Back</button></LinkTo>
+        
+      </div>
+    </div>
+  </div>
+</div>
