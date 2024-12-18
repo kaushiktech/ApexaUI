@@ -170,3 +170,7 @@ C:\DEV_AREA\ApexaUI\API\ApexApi\bin\Debug\net8.0\ApexApi.Utility.pdb
 C:\DEV_AREA\ApexaUI\API\ApexApi\bin\Debug\net8.0\NLog.dll
 C:\DEV_AREA\ApexaUI\API\ApexApi\bin\Debug\net8.0\NLog.Extensions.Logging.dll
 C:\DEV_AREA\ApexaUI\API\ApexApi\bin\Debug\net8.0\NLog.Web.AspNetCore.dll
+C:\DEV_AREA\ApexaUI\API\ApexApi\bin\Debug\net8.0\System.Net.Http.Formatting.dll
+C:\DEV_AREA\ApexaUI\API\ApexApi\bin\Debug\net8.0\System.Web.Http.dll
+C:\DEV_AREA\ApexaUI\API\ApexApi\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\DEV_AREA\ApexaUI\API\ApexApi\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll

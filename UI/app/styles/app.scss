@@ -18,6 +18,13 @@
     overflow-y: hidden;
     overflow-x: hidden;
 }
+.error-warning{
+    background-color: pink;
+    color: red;
+    font-weight: 500;
+    border: 1px solid red;
+    border-radius: 4px;
+}
 .login {
     position: absolute;
     width: 40%;
@@ -67,6 +74,7 @@
             margin-bottom: .5rem;
         }
     }
+    
 }
 
 

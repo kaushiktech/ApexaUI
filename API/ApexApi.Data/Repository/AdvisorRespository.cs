@@ -9,15 +9,27 @@ namespace ApexApi.Data.Repository
     public class AdvisorRepository : Repository<Advisor>, IAdvisorRepository
     {
         private readonly ApplicationDbContext _dbContext;
-
+        List<RuleViolation> _errors = new List<RuleViolation>();
         public AdvisorRepository(ApplicationDbContext dbContext) : base(dbContext)
         {
             _dbContext = dbContext;
         }
+        //Uniqueness does not work for in memory db by standard means, need to explictly check
+        private bool CheckIfSinExists(string sin)
+        {
+            return _dbContext.Advisors.Any(a => a.sin == sin);
+        }
+        public IEnumerable<RuleViolation> GetRuleViolations()
+        {
+            return _errors;
+        }
         public void Add(Advisor entity)
         {
             entity.healthStatus = ModelHelper.GenerateHealthStatus();
-            dbSet.Add(entity);
+            if(CheckIfSinExists(entity.sin))
+                _errors.Add(new RuleViolation("Sin aldready exists, please pick another", "sin"));
+            else
+                dbSet.Add(entity);
         }
         public void Update(Advisor entity)
         {

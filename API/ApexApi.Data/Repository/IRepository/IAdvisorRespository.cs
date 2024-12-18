@@ -7,5 +7,6 @@ namespace ApexApi.Data.Repository.IRepository
         void Add(Advisor entity);
         void Update(Advisor entity);
         void Save();
+        IEnumerable<RuleViolation> GetRuleViolations();
     }
 }

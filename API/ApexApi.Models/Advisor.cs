@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Diagnostics.Metrics;
+using System.Net;
 using System.Text.Json.Serialization;
 
 
@@ -16,9 +18,9 @@ namespace ApexApi.Models
     {
         [Key]
         public long Id { get; set; }
-        [Required, MaxLength(255,ErrorMessage ="Maximum length of Full Name can be only 255 charachters")]
+        [Required(ErrorMessage = "Full name is required."), MaxLength(255,ErrorMessage ="Maximum length of Full Name can be only 255 charachters")]
         public string fullName { get; set; }
-        [Required, Length(maximumLength: 9, minimumLength: 9, ErrorMessage = "Length of SIN can be only 9 numbers")]
+        [Required(ErrorMessage ="Sin is required."), Length(maximumLength: 9, minimumLength: 9, ErrorMessage = "Length of SIN can be only 9 numbers")]
         public string sin { get; set; }
         [MaxLength(255,ErrorMessage ="Maximum length of Address can be only 255 charachters")]
         public string? address { get; set; }
@@ -40,5 +42,18 @@ namespace ApexApi.Models
                         return "green";
                 }
             } }
+    }
+    
+    public class RuleViolation
+    {
+
+        public string ErrorMessage { get; private set; }
+        public string PropertyName { get; private set; }
+
+        public RuleViolation(string errorMessage, string propertyName)
+        {
+            ErrorMessage = errorMessage;
+            PropertyName = propertyName;
+        }
     }
 }

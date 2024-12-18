@@ -1,4 +1,7 @@
-﻿namespace ApexApi.Utility
+﻿using System.Collections;
+using System.Web.Http.ModelBinding;
+
+namespace ApexApi.Utility
 {
     public static class ModelHelper
     {
@@ -8,6 +11,17 @@
         {
             int rand = getrandom.Next(1, 3);
             return rand;
+        }
+        public static IEnumerable Errors(this ModelStateDictionary modelState)
+        {
+            if (!modelState.IsValid)
+            {
+                return modelState.ToDictionary(kvp => kvp.Key,
+                    kvp => kvp.Value.Errors
+                                    .Select(e => e.ErrorMessage).ToArray())
+                                    .Where(m => m.Value.Any());
+            }
+            return null;
         }
     }
     public static class Masking

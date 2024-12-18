@@ -10,3 +10,4 @@ C:\DEV_AREA\ApexaUI\API\ApexApi.Utility\obj\Debug\net8.0\ApexApi.Utility.dll
 C:\DEV_AREA\ApexaUI\API\ApexApi.Utility\obj\Debug\net8.0\refint\ApexApi.Utility.dll
 C:\DEV_AREA\ApexaUI\API\ApexApi.Utility\obj\Debug\net8.0\ApexApi.Utility.pdb
 C:\DEV_AREA\ApexaUI\API\ApexApi.Utility\obj\Debug\net8.0\ref\ApexApi.Utility.dll
+C:\DEV_AREA\ApexaUI\API\ApexApi.Utility\obj\Debug\net8.0\ApexApi.Utility.csproj.AssemblyReference.cache

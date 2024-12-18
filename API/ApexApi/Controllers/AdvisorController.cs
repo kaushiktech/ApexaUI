@@ -3,6 +3,9 @@ using ApexApi.Models;
 using ApexApi.Utility;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System.Collections;
+using System.Web.Http.ModelBinding;
 
 namespace ApexApi.Controllers
 {
@@ -72,7 +75,24 @@ namespace ApexApi.Controllers
             if (ModelState.IsValid)
             {
                 _repository.Add(obj.advisor);
-                _repository.Save();
+                IEnumerable<RuleViolation> rules= _repository.GetRuleViolations();
+                if (rules.Count() > 0)
+                {
+                    foreach (RuleViolation rule in rules) {
+                        ModelState.AddModelError(rule.PropertyName, rule.ErrorMessage);
+                    }
+                    var errors = new Hashtable();
+                    foreach (var pair in ModelState)
+                    {
+                        if (pair.Value.Errors.Count > 0)
+                        {
+                            errors[pair.Key] = pair.Value.Errors.Select(error => error.ErrorMessage).ToList();
+                        }
+                    }
+                    return BadRequest(new {errors=errors});
+                }
+                else
+                    _repository.Save();
                 return Json( obj );
             }
             else

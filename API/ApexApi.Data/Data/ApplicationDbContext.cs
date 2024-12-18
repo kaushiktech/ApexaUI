@@ -17,11 +17,11 @@ namespace ApexApi.Data.Data
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Advisor>().HasData
-                (
-                    new Advisor { Id = 1, fullName = "Action", sin = "123123123" },
-                    new Advisor { Id = 2, fullName = "SciFi", sin = "133123323" },
-                    new Advisor { Id = 3, fullName = "History", sin = "143123143" }
-                );
+            (
+                new Advisor { Id = 1, fullName = "Action", sin = "123123123" },
+                new Advisor { Id = 2, fullName = "SciFi", sin = "133123323" },
+                new Advisor { Id = 3, fullName = "History", sin = "143123143" }
+            );
         }
     }  
     

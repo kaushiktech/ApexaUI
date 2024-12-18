@@ -1,15 +1,37 @@
 import Controller from '@ember/controller';
 import { action } from '@ember/object';
 import { inject as service } from '@ember/service';
+import  { tracked } from '@glimmer/tracking';
 
 export default class AdvisorEditController extends Controller {
   @service store;
   @service session;
   @service router;
-  gotoAdvisor() {
-    this.router.transitionTo('advisor');
+  @tracked errors='';
+  @action
+  async gotoAdvisor() {
+    this.errors='';
+    window.location.href='../../advisor';
+    
+  }
+  get displayErrors() {
+    
+    return this.errors;
+  }
+  parseErrors(errors){
+    
+    //Hacky way of extracting errors from error response
+    if(errors.errors[0]!=undefined)
+    {
+      var errors=JSON.parse(errors.errors[0].detail).errors;
+      for(const key in errors){
+          this.errors+='<li class="text-danger">'+errors[key][0]+'</li>';
+      }
+    }
+    
   }
   @action save(event) {
+    this.errors='';
     event.preventDefault();
     var model = this.get('model');
     if (model.id > 0) {
@@ -27,7 +49,8 @@ export default class AdvisorEditController extends Controller {
             self.gotoAdvisor();
         })
         .catch((e) => {
-            console.log(e);
+          
+            this.parseErrors(e);
         });
         
       });
@@ -41,8 +64,11 @@ export default class AdvisorEditController extends Controller {
             self.gotoAdvisor();
         })
         .catch((e) => {
-            console.log(e);
+          
+          this.parseErrors(e);
         });
     }
+    
   }
+  
 }
