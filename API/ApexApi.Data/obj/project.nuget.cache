@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "EtsZMpYmrQw=",
+  "dgSpecHash": "DcbrsDCbz/M=",
   "success": true,
   "projectFilePath": "C:\\DEV_AREA\\ApexaUI\\API\\ApexApi.Data\\ApexApi.Data.csproj",
   "expectedPackageFiles": [
@@ -34,6 +34,9 @@
     "C:\\Users\\xombeh\\.nuget\\packages\\microsoft.extensions.options\\8.0.2\\microsoft.extensions.options.8.0.2.nupkg.sha512",
     "C:\\Users\\xombeh\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
     "C:\\Users\\xombeh\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\xombeh\\.nuget\\packages\\nlog\\5.3.4\\nlog.5.3.4.nupkg.sha512",
+    "C:\\Users\\xombeh\\.nuget\\packages\\nlog.extensions.logging\\5.3.15\\nlog.extensions.logging.5.3.15.nupkg.sha512",
+    "C:\\Users\\xombeh\\.nuget\\packages\\nlog.web.aspnetcore\\5.3.15\\nlog.web.aspnetcore.5.3.15.nupkg.sha512",
     "C:\\Users\\xombeh\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\xombeh\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\xombeh\\.nuget\\packages\\system.composition\\6.0.0\\system.composition.6.0.0.nupkg.sha512",

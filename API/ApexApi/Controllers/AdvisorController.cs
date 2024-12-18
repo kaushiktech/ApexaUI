@@ -11,9 +11,11 @@ namespace ApexApi.Controllers
     public class AdvisorController : Controller
     {
         private readonly IAdvisorRepository _repository;
-        public AdvisorController(IAdvisorRepository repository)
+        private readonly ILogger<AdvisorController> _logger;
+        public AdvisorController(IAdvisorRepository repository, ILogger<AdvisorController> logger)
         {
             _repository = repository;
+            _logger = logger;
         }
         [HttpGet]
         [Route("advisors/{id?}")]
@@ -83,6 +85,7 @@ namespace ApexApi.Controllers
         {
             //Temp hack to get around ember not sending id's
             obj.advisor.Id = id;
+            
             if (ModelState.IsValid)
             {
                 _repository.Update(obj.advisor);

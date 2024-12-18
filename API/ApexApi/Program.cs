@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using NLog.Extensions.Logging;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -38,6 +39,13 @@ builder.Services.AddAuthentication(options =>
          IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(builder.Configuration["APEXA_JWT_KEY"]))
      };
  });
+builder.Services.AddLogging(logging =>
+{
+    logging.ClearProviders();
+    logging.SetMinimumLevel(LogLevel.Trace);
+});
+builder.Services.AddSingleton<ILoggerProvider, NLogLoggerProvider>();
+
 if (builder.Environment.IsDevelopment())
 {
     builder.Services.AddCors(options =>

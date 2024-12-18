@@ -167,3 +167,6 @@ C:\DEV_AREA\ApexaUI\API\ApexApi\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.
 C:\DEV_AREA\ApexaUI\API\ApexApi\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
 C:\DEV_AREA\ApexaUI\API\ApexApi\bin\Debug\net8.0\ApexApi.Utility.dll
 C:\DEV_AREA\ApexaUI\API\ApexApi\bin\Debug\net8.0\ApexApi.Utility.pdb
+C:\DEV_AREA\ApexaUI\API\ApexApi\bin\Debug\net8.0\NLog.dll
+C:\DEV_AREA\ApexaUI\API\ApexApi\bin\Debug\net8.0\NLog.Extensions.Logging.dll
+C:\DEV_AREA\ApexaUI\API\ApexApi\bin\Debug\net8.0\NLog.Web.AspNetCore.dll

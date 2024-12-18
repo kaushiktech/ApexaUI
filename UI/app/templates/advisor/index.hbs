@@ -1,6 +1,6 @@
 {{page-title "Index"}}
 <div class="container my-5">
-  <h2>Advisors <LinkTo @route="advisor.edit" @model="new"><button class="btn btn-secondary" type="button">Create<i class="px-1 fa-solid fa-plus"></i></button></LinkTo></h2> 
+  <h2>Advisors {{#if this.session.isAuthenticated}}<LinkTo @route="advisor.edit" @model="new"><button class="btn btn-secondary" type="button">Create<i class="px-1 fa-solid fa-plus"></i></button></LinkTo>{{/if}}</h2> 
 
   <div class="table-responsive">
     <table class="table">
