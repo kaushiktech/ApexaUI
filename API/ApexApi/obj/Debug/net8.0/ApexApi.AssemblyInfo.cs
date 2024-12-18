@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ApexApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+25a83ee20b6e9a5c9f11f5e221f4b490cdd79494")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+88a746ddb9cd7f6d51159b5bc82e33293b5b334e")]
 [assembly: System.Reflection.AssemblyProductAttribute("ApexApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ApexApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

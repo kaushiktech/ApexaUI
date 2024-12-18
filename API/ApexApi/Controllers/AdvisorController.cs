@@ -3,9 +3,8 @@ using ApexApi.Models;
 using ApexApi.Utility;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System.Collections;
-using System.Web.Http.ModelBinding;
+
 
 namespace ApexApi.Controllers
 {
@@ -30,7 +29,7 @@ namespace ApexApi.Controllers
                 foreach(Advisor advisor in objAdvisorList)
                 {
                     advisor.sin = advisor.sin.MaskAllButLast(3, 'X');
-                    advisor.phoneNumber = advisor.phoneNumber.MaskAllButLast(3, 'X');
+                    advisor.phoneNumber = advisor.phoneNumber?.MaskAllButLast(3, 'X');
                 }
                 return Json(new { advisors = objAdvisorList });
             }
@@ -43,7 +42,7 @@ namespace ApexApi.Controllers
                 else
                 {
                     objAdvisor.sin = objAdvisor.sin.MaskAllButLast(3, 'X');
-                    objAdvisor.phoneNumber = objAdvisor.phoneNumber.MaskAllButLast(3, 'X');
+                    objAdvisor.phoneNumber = objAdvisor.phoneNumber?.MaskAllButLast(3, 'X');
                     return Json(new { advisor = objAdvisor });
                 }
             }

@@ -6,6 +6,6 @@ export default class AdvisorController extends Controller {
   @service PopUp;
   @service session;
   @action openPopup() {
-    this.PopUp.updateIt(true);
+    this.PopUp.openPopup(true);
   }
 }

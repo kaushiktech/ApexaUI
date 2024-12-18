@@ -5,7 +5,7 @@ import { tracked } from '@glimmer/tracking';
 export default class PopUpService extends Service {
   @tracked isOpen = false;
 
-  updateIt(isOpen) {
+  openPopup(isOpen) {
     this.isOpen = isOpen;
   }
 }

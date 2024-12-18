@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\DEV_AREA\\ApexaUI\\API\\ApexApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DBA35851-1488-4A46-9654-8EEB5CFCEC7C}|..\\ApexApi.Models\\ApexApi.Models.csproj|c:\\dev_area\\apexaui\\api\\apexapi.models\\advisor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A592F73E-477D-43E6-9608-5A6A25682336}|ApexApi.csproj|c:\\dev_area\\apexaui\\api\\apexapi\\controllers\\advisorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A592F73E-477D-43E6-9608-5A6A25682336}|ApexApi.csproj|solutionrelative:controllers\\advisorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBA35851-1488-4A46-9654-8EEB5CFCEC7C}|..\\ApexApi.Models\\ApexApi.Models.csproj|c:\\dev_area\\apexaui\\api\\apexapi.models\\advisor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BE5C98E4-0962-4C92-B418-09FC513A4AA5}|..\\ApexApi.Data\\ApexApi.Data.csproj|c:\\dev_area\\apexaui\\api\\apexapi.data\\datagenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -65,7 +65,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -73,13 +73,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "AdvisorController.cs",
               "DocumentMoniker": "C:\\DEV_AREA\\ApexaUI\\API\\ApexApi\\Controllers\\AdvisorController.cs",
               "RelativeDocumentMoniker": "Controllers\\AdvisorController.cs",
               "ToolTip": "C:\\DEV_AREA\\ApexaUI\\API\\ApexApi\\Controllers\\AdvisorController.cs",
               "RelativeToolTip": "Controllers\\AdvisorController.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAwwFgAAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAwwGMAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-16T01:19:48.021Z",
               "EditorCaption": ""
@@ -138,13 +138,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Advisor.cs",
               "DocumentMoniker": "C:\\DEV_AREA\\ApexaUI\\API\\ApexApi.Models\\Advisor.cs",
               "RelativeDocumentMoniker": "..\\ApexApi.Models\\Advisor.cs",
               "ToolTip": "C:\\DEV_AREA\\ApexaUI\\API\\ApexApi.Models\\Advisor.cs",
               "RelativeToolTip": "..\\ApexApi.Models\\Advisor.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAmwBQAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAmwBQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-15T20:21:48.229Z",
               "EditorCaption": ""

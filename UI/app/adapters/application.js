@@ -1,11 +1,12 @@
 import RESTAdapter from '@ember-data/adapter/rest';
 import { computed } from '@ember/object';
 import { inject as service } from '@ember/service';
+import ENV from '../config/environment';
 
 export default class ApplicationAdapter extends RESTAdapter {
   @service store;
   namespace = 'api';
-  host = 'https://localhost:7019';
+  host = ENV.APP.HostURL;
   @service session;
   @computed(
     'session.data.authenticated.token'

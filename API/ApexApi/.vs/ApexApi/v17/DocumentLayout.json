@@ -7,6 +7,18 @@
       "RelativeMoniker": "D:0:0:{A592F73E-477D-43E6-9608-5A6A25682336}|ApexApi.csproj|solutionrelative:controllers\\advisorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A592F73E-477D-43E6-9608-5A6A25682336}|ApexApi.csproj|c:\\dev_area\\apexaui\\api\\apexapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A592F73E-477D-43E6-9608-5A6A25682336}|ApexApi.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A592F73E-477D-43E6-9608-5A6A25682336}|ApexApi.csproj|c:\\dev_area\\apexaui\\api\\apexapi\\apexapi.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{A592F73E-477D-43E6-9608-5A6A25682336}|ApexApi.csproj|solutionrelative:apexapi.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A592F73E-477D-43E6-9608-5A6A25682336}|ApexApi.csproj|c:\\dev_area\\apexaui\\api\\apexapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A592F73E-477D-43E6-9608-5A6A25682336}|ApexApi.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DBA35851-1488-4A46-9654-8EEB5CFCEC7C}|..\\ApexApi.Models\\ApexApi.Models.csproj|c:\\dev_area\\apexaui\\api\\apexapi.models\\advisor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -38,10 +50,6 @@
       "AbsoluteMoniker": "D:0:0:{BE5C98E4-0962-4C92-B418-09FC513A4AA5}|..\\ApexApi.Data\\ApexApi.Data.csproj|c:\\dev_area\\apexaui\\api\\apexapi.data\\repository\\irepository\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A592F73E-477D-43E6-9608-5A6A25682336}|ApexApi.csproj|c:\\dev_area\\apexaui\\api\\apexapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A592F73E-477D-43E6-9608-5A6A25682336}|ApexApi.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A592F73E-477D-43E6-9608-5A6A25682336}|ApexApi.csproj|c:\\dev_area\\apexaui\\api\\apexapi\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A592F73E-477D-43E6-9608-5A6A25682336}|ApexApi.csproj|solutionrelative:controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -65,11 +73,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\DEV_AREA\\ApexaUI\\API\\ApexApi\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\DEV_AREA\\ApexaUI\\API\\ApexApi\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-18T19:34:09.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ApexApi",
+              "DocumentMoniker": "C:\\DEV_AREA\\ApexaUI\\API\\ApexApi\\ApexApi.csproj",
+              "RelativeDocumentMoniker": "ApexApi.csproj",
+              "ToolTip": "C:\\DEV_AREA\\ApexaUI\\API\\ApexApi\\ApexApi.csproj",
+              "RelativeToolTip": "ApexApi.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-12-18T19:33:13.07Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -79,27 +112,14 @@
               "RelativeDocumentMoniker": "Controllers\\AdvisorController.cs",
               "ToolTip": "C:\\DEV_AREA\\ApexaUI\\API\\ApexApi\\Controllers\\AdvisorController.cs",
               "RelativeToolTip": "Controllers\\AdvisorController.cs",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAwwGMAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-16T01:19:48.021Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IAdvisorRespository.cs",
-              "DocumentMoniker": "C:\\DEV_AREA\\ApexaUI\\API\\ApexApi.Data\\Repository\\IRepository\\IAdvisorRespository.cs",
-              "RelativeDocumentMoniker": "..\\ApexApi.Data\\Repository\\IRepository\\IAdvisorRespository.cs",
-              "ToolTip": "C:\\DEV_AREA\\ApexaUI\\API\\ApexApi.Data\\Repository\\IRepository\\IAdvisorRespository.cs",
-              "RelativeToolTip": "..\\ApexApi.Data\\Repository\\IRepository\\IAdvisorRespository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T01:41:46.623Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "IRepository.cs",
               "DocumentMoniker": "C:\\DEV_AREA\\ApexaUI\\API\\ApexApi.Data\\Repository\\IRepository\\IRepository.cs",
               "RelativeDocumentMoniker": "..\\ApexApi.Data\\Repository\\IRepository\\IRepository.cs",
@@ -107,12 +127,11 @@
               "RelativeToolTip": "..\\ApexApi.Data\\Repository\\IRepository\\IRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T21:05:01.312Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-15T21:05:01.312Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "AdminInitializer.cs",
               "DocumentMoniker": "C:\\DEV_AREA\\ApexaUI\\API\\ApexApi.Data\\AdminInitializer.cs",
               "RelativeDocumentMoniker": "..\\ApexApi.Data\\AdminInitializer.cs",
@@ -120,12 +139,11 @@
               "RelativeToolTip": "..\\ApexApi.Data\\AdminInitializer.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAABkAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T00:23:03.313Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-16T00:23:03.313Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\DEV_AREA\\ApexaUI\\API\\ApexApi.Data\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "..\\ApexApi.Data\\Data\\ApplicationDbContext.cs",
@@ -133,12 +151,11 @@
               "RelativeToolTip": "..\\ApexApi.Data\\Data\\ApplicationDbContext.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAjwBEAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T21:00:11.706Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-15T21:00:11.706Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Advisor.cs",
               "DocumentMoniker": "C:\\DEV_AREA\\ApexaUI\\API\\ApexApi.Models\\Advisor.cs",
               "RelativeDocumentMoniker": "..\\ApexApi.Models\\Advisor.cs",
@@ -146,12 +163,11 @@
               "RelativeToolTip": "..\\ApexApi.Models\\Advisor.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAmwBQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T20:21:48.229Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-15T20:21:48.229Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "DataGenerator.cs",
               "DocumentMoniker": "C:\\DEV_AREA\\ApexaUI\\API\\ApexApi.Data\\DataGenerator.cs",
               "RelativeDocumentMoniker": "..\\ApexApi.Data\\DataGenerator.cs",
@@ -159,12 +175,11 @@
               "RelativeToolTip": "..\\ApexApi.Data\\DataGenerator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T02:19:32.711Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-16T02:19:32.711Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "AdvisorRespository.cs",
               "DocumentMoniker": "C:\\DEV_AREA\\ApexaUI\\API\\ApexApi.Data\\Repository\\AdvisorRespository.cs",
               "RelativeDocumentMoniker": "..\\ApexApi.Data\\Repository\\AdvisorRespository.cs",
@@ -172,12 +187,11 @@
               "RelativeToolTip": "..\\ApexApi.Data\\Repository\\AdvisorRespository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T01:43:46.22Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-16T01:43:46.22Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "ModelHelper.cs",
               "DocumentMoniker": "C:\\DEV_AREA\\ApexaUI\\API\\ApexApi.Utility\\ModelHelper.cs",
               "RelativeDocumentMoniker": "..\\ApexApi.Utility\\ModelHelper.cs",
@@ -185,12 +199,11 @@
               "RelativeToolTip": "..\\ApexApi.Utility\\ModelHelper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwA4AAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T03:20:48.323Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-16T03:20:48.323Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "LoginModel.cs",
               "DocumentMoniker": "C:\\DEV_AREA\\ApexaUI\\API\\ApexApi.Models\\LoginModel.cs",
               "RelativeDocumentMoniker": "..\\ApexApi.Models\\LoginModel.cs",
@@ -198,12 +211,36 @@
               "RelativeToolTip": "..\\ApexApi.Models\\LoginModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T22:08:45.172Z",
+              "WhenOpened": "2024-12-15T22:08:45.172Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\DEV_AREA\\ApexaUI\\API\\ApexApi\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\DEV_AREA\\ApexaUI\\API\\ApexApi\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-16T02:31:43.762Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
+              "Title": "IAdvisorRespository.cs",
+              "DocumentMoniker": "C:\\DEV_AREA\\ApexaUI\\API\\ApexApi.Data\\Repository\\IRepository\\IAdvisorRespository.cs",
+              "RelativeDocumentMoniker": "..\\ApexApi.Data\\Repository\\IRepository\\IAdvisorRespository.cs",
+              "ToolTip": "C:\\DEV_AREA\\ApexaUI\\API\\ApexApi.Data\\Repository\\IRepository\\IAdvisorRespository.cs",
+              "RelativeToolTip": "..\\ApexApi.Data\\Repository\\IRepository\\IAdvisorRespository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T01:41:46.623Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "UpdateAdvisor.cs",
               "DocumentMoniker": "C:\\DEV_AREA\\ApexaUI\\API\\ApexApi.Models\\UpdateAdvisor.cs",
               "RelativeDocumentMoniker": "..\\ApexApi.Models\\UpdateAdvisor.cs",
@@ -211,12 +248,11 @@
               "RelativeToolTip": "..\\ApexApi.Models\\UpdateAdvisor.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAmwAIAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T04:15:02.655Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-16T04:15:02.655Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\DEV_AREA\\ApexaUI\\API\\ApexApi\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -224,25 +260,11 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAABMAAAAAAAAAAIBJwC8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T20:19:47.196Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-15T20:19:47.196Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\DEV_AREA\\ApexaUI\\API\\ApexApi\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\DEV_AREA\\ApexaUI\\API\\ApexApi\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-16T02:31:43.762Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "AuthenticationController.cs",
               "DocumentMoniker": "C:\\DEV_AREA\\ApexaUI\\API\\ApexApi\\Controllers\\AuthenticationController.cs",
               "RelativeDocumentMoniker": "Controllers\\AuthenticationController.cs",
@@ -250,12 +272,11 @@
               "RelativeToolTip": "Controllers\\AuthenticationController.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAQwC4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T21:52:32.722Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-15T21:52:32.722Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "RegisterModel.cs",
               "DocumentMoniker": "C:\\DEV_AREA\\ApexaUI\\API\\ApexApi.Models\\RegisterModel.cs",
               "RelativeDocumentMoniker": "..\\ApexApi.Models\\RegisterModel.cs",
@@ -263,12 +284,11 @@
               "RelativeToolTip": "..\\ApexApi.Models\\RegisterModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwBEAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T22:09:30.418Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-15T22:09:30.418Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\xombeh\\source\\repos\\ApexApi.Models\\Class1.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Users\\xombeh\\source\\repos\\ApexApi.Models\\Class1.cs",
@@ -279,7 +299,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\xombeh\\source\\repos\\ApexApi.Data\\Class1.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Users\\xombeh\\source\\repos\\ApexApi.Data\\Class1.cs",

@@ -32,6 +32,6 @@ export default class Popup extends Component {
   }
 
   @action toggleLoginPopup() {
-    this.PopUp.updateIt(!this.PopUp.isOpen);
+    this.PopUp.openPopup(!this.PopUp.isOpen);
   }
 }

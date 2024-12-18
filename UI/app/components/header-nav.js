@@ -19,6 +19,6 @@ export default class HeaderNav extends Component {
     this.router.transitionTo(route);
   }
   @action openPopup() {
-    this.PopUp.updateIt(true);
+    this.PopUp.openPopup(true);
   }
 }

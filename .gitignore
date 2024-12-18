@@ -4,8 +4,3 @@ _ReSharper.*
 bin
 obj
 packages
-/API/ApexApi/.vs/ApexApi/FileContentIndex
-/API/ApexApi.Data/obj
-/API/ApexApi.Data/obj/Debug/net8.0
-/API/ApexApi.Utility/obj/Debug/net8.0
-/API/ApexApi.Utility/obj/Debug/net8.0/ApexApi.Utility.AssemblyInfoInputs.cache
