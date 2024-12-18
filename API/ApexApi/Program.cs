@@ -4,17 +4,16 @@ using ApexApi.Data.Repository;
 using ApexApi.Data.Repository.IRepository;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using NLog.Extensions.Logging;
 using System.Text;
+using System.Threading.RateLimiting;
 
 var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-
 
 builder.Services.AddDbContext<ApplicationDbContext>(o =>
 {
@@ -105,15 +104,20 @@ using (var serviceScope = app.Services.CreateScope())
     bool.TryParse(app.Configuration["SeedData"]?.ToString(), out doSeedData);
     //Seed Data
     if (doSeedData)
+    {
         DataGenerator.Initialize(services);
+        app.Logger.Log(LogLevel.Information, "Database seeded");
+    }
     //Seed 'admin' username - Remember to add environment variable APEXA_ADMIN_PASSWORD 
     adminInit.RegisterAdmin();
+    app.Logger.Log(LogLevel.Information, "Database admin added.");
 }
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
 if (app.Environment.IsDevelopment())
 {
     app.UseCors("AllowAllOrigins");
