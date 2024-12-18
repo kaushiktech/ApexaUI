@@ -16,28 +16,31 @@ namespace ApexApi.Data.Repository
         }
         public void Add(Advisor entity)
         {
-            entity.HealthStatus = ModelHelper.GenerateHealthStatus();
+            entity.healthStatus = ModelHelper.GenerateHealthStatus();
             dbSet.Add(entity);
         }
         public void Update(Advisor entity)
         {
             Advisor obj =_dbContext.Advisors.FirstOrDefault(a => a.Id == entity.Id);
-            UpdateAdvisor(obj, entity);
-            dbSet.Add(entity);
+            UpdateAdvisor(entity, obj);
+            dbSet.Update(obj);
         }
         public void Save()
         {
             _dbContext.SaveChanges();
         }
-        private void UpdateAdvisor(Advisor source,Advisor target)
+        private void UpdateAdvisor(Advisor entity,Advisor obj)
         {
-            target.HealthStatus = source.HealthStatus;
+            //obj.healthStatus = source.healthStatus;
+            obj.address = entity.address;
+            obj.fullName = entity.fullName;
+
             //If masked charachter detected reset phone number to source
-            if(target.PhoneNumber.Contains("X"))
-                target.PhoneNumber = source.PhoneNumber;
+            if (!string.IsNullOrEmpty(entity.phoneNumber) && !entity.phoneNumber.Contains("X"))
+                obj.phoneNumber = entity.phoneNumber;
             //If masked charachter detected reset SIN to source
-            if (target.SIN.Contains("X"))
-                target.SIN = source.SIN;
+            if (!string.IsNullOrEmpty(entity.sin) && !entity.sin.Contains("X"))
+                obj.sin = entity.sin;
         }
     }
 }

@@ -1,5 +1,5 @@
 {{page-title "Index"}}
-<div class="container">
+<div class="container my-5">
   <h2>Advisors <LinkTo @route="advisor.edit" @model="new"><button class="btn btn-secondary" type="button">Create<i class="px-1 fa-solid fa-plus"></i></button></LinkTo></h2> 
 
   <div class="table-responsive">
@@ -15,6 +15,7 @@
       <tbody>
         
         {{#each this.model as |advisor|}}
+        {{#if (gt advisor.id 0)}}
           <tr>
             <td>{{advisor.fullName}}</td>
             <td>{{advisor.sin}}</td>
@@ -27,11 +28,12 @@
               >View</button>
               </LinkTo>
               {{#if this.session.isAuthenticated}}
+              <LinkTo @route="advisor.edit" @model="{{advisor.id}}">
               <button
                 type="button"
                 class="btn btn-secondary"
               >Edit</button>
-              
+              </LinkTo>
               <button {{on "click" (fn this.deleteAdvisor advisor)}}
                 type="button"
                 class="btn btn-danger"
@@ -39,6 +41,7 @@
               {{/if}}
             </td>
           </tr>
+          {{/if}}
         {{/each}}
         
       </tbody>

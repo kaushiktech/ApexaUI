@@ -18,9 +18,9 @@ namespace ApexApi.Data
             using (var context = new ApplicationDbContext(serviceProvider.GetRequiredService<DbContextOptions<ApplicationDbContext>>()))
             {
                 context.Advisors.AddRange(
-                    new Advisor { Id = 1, FullName = "ABC", SIN = "123123123", HealthStatus = ModelHelper.GenerateHealthStatus() },
-                    new Advisor { Id = 2, FullName = "DEF", SIN = "133123323", HealthStatus = ModelHelper.GenerateHealthStatus() },
-                    new Advisor { Id = 3, FullName = "GHI", SIN = "143123143", HealthStatus = ModelHelper.GenerateHealthStatus() }
+                    new Advisor { Id = 1, fullName = "Rocco Whitaker", sin = "123123123", healthStatus = 1 },
+                    new Advisor { Id = 2, fullName = "Melina Tapia", sin = "133123323", healthStatus = 2 },
+                    new Advisor { Id = 3, fullName = "Tanner Aguilar", sin = "143123143", healthStatus = 3 }
                     );
                 context.SaveChanges();
             }

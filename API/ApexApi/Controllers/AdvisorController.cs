@@ -24,8 +24,8 @@ namespace ApexApi.Controllers
                 var objAdvisorList = _repository.GetAll();
                 foreach(Advisor advisor in objAdvisorList)
                 {
-                    advisor.SIN = advisor.SIN.MaskAllButLast(3, 'X');
-                    advisor.PhoneNumber = advisor.PhoneNumber.MaskAllButLast(3, 'X');
+                    advisor.sin = advisor.sin.MaskAllButLast(3, 'X');
+                    advisor.phoneNumber = advisor.phoneNumber.MaskAllButLast(3, 'X');
                 }
                 return Json(new { advisors = objAdvisorList });
             }
@@ -37,8 +37,8 @@ namespace ApexApi.Controllers
                     return NotFound(new { Status = "Error", Message = "Advisor not found!" });
                 else
                 {
-                    objAdvisor.SIN = objAdvisor.SIN.MaskAllButLast(3, 'X');
-                    objAdvisor.PhoneNumber = objAdvisor.PhoneNumber.MaskAllButLast(3, 'X');
+                    objAdvisor.sin = objAdvisor.sin.MaskAllButLast(3, 'X');
+                    objAdvisor.phoneNumber = objAdvisor.phoneNumber.MaskAllButLast(3, 'X');
                     return Json(new { advisor = objAdvisor });
                 }
             }
@@ -65,29 +65,32 @@ namespace ApexApi.Controllers
         [Authorize(AuthenticationSchemes = "Bearer")]
         [Route("advisors")]
         [HttpPost]
-        public IActionResult Create(Advisor obj)
+        public IActionResult Create(RequestObject obj)
         {
             if (ModelState.IsValid)
             {
-                _repository.Add(obj);
+                _repository.Add(obj.advisor);
                 _repository.Save();
-                return Ok(new Response { Status = "Success", Message = "Advisor created successfully!" });
+                return Json( obj );
             }
             else
                 return BadRequest();
         }
         [Authorize(AuthenticationSchemes = "Bearer")]
-        [Route("advisors")]
-        [HttpPatch]
-        public IActionResult Edit(UpdateAdvisor obj)
+        [Route("advisors/{id?}")]
+        [HttpPut]
+        public IActionResult Edit(RequestObject obj,long id)
         {
+            //Temp hack to get around ember not sending id's
+            obj.advisor.Id = id;
             if (ModelState.IsValid)
             {
-                _repository.Update(obj);
+                _repository.Update(obj.advisor);
                 _repository.Save();
-                return RedirectToAction("Index");
+                return Json(obj);
             }
-            return View();
+            else
+                return BadRequest();
         }
     }
 }

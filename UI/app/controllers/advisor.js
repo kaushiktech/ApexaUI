@@ -8,5 +8,4 @@ export default class AdvisorController extends Controller {
   @action openPopup() {
     this.PopUp.updateIt(true);
   }
-  
 }

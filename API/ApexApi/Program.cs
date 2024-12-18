@@ -15,7 +15,11 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 
-builder.Services.AddDbContext<ApplicationDbContext>(o => o.UseInMemoryDatabase(databaseName: "ApexaDB"));
+builder.Services.AddDbContext<ApplicationDbContext>(o =>
+{
+    o.UseInMemoryDatabase(databaseName: "ApexaDB");
+}
+);
 builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
 
 builder.Services.AddAuthentication(options =>

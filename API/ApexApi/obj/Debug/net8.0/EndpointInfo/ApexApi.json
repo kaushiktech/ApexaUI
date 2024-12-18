@@ -47,6 +47,46 @@
             "description": "OK"
           }
         }
+      },
+      "put": {
+        "tags": [
+          "Advisor"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestObject"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestObject"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestObject"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
       }
     },
     "/api/advisors": {
@@ -58,46 +98,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Advisor"
+                "$ref": "#/components/schemas/RequestObject"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Advisor"
+                "$ref": "#/components/schemas/RequestObject"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Advisor"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
-      "patch": {
-        "tags": [
-          "Advisor"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/UpdateAdvisor"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/UpdateAdvisor"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/UpdateAdvisor"
+                "$ref": "#/components/schemas/RequestObject"
               }
             }
           }
@@ -214,7 +225,7 @@
         "properties": {
           "id": {
             "type": "integer",
-            "format": "int32"
+            "format": "int64"
           },
           "fullName": {
             "maxLength": 255,
@@ -292,38 +303,11 @@
         },
         "additionalProperties": false
       },
-      "UpdateAdvisor": {
-        "required": [
-          "fullName"
-        ],
+      "RequestObject": {
         "type": "object",
         "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "fullName": {
-            "maxLength": 255,
-            "minLength": 1,
-            "type": "string"
-          },
-          "address": {
-            "maxLength": 255,
-            "type": "string",
-            "nullable": true
-          },
-          "displayHealthStatus": {
-            "type": "string",
-            "nullable": true,
-            "readOnly": true
-          },
-          "sin": {
-            "type": "string",
-            "nullable": true
-          },
-          "phoneNumber": {
-            "type": "string",
-            "nullable": true
+          "advisor": {
+            "$ref": "#/components/schemas/Advisor"
           }
         },
         "additionalProperties": false

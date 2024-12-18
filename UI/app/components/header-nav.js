@@ -13,7 +13,6 @@ export default class HeaderNav extends Component {
       : this.router.currentRouteName;
   }
   @action logout() {
-    console.log(this.session.isAuthenticated);
     this.session.invalidate();
   }
   @action redirect(route) {
