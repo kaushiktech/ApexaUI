@@ -9,6 +9,9 @@ So basically, some of the features that I included are:-
    So setting setx APEXA_ADMIN_PASSWORD "Password here"
 4) Also because there is JWT auth, we also need to add a setx APEXA_JWT_KEY "Auth Key", a key to make that auth possible.
 5) I found learning Ember a bit of learning curve as there were a few guides unlike react based on youtube, is a bit quirky for me with me working on mvc.net most of my life, but it took some time for me to get through.
+6) One thing that stumped me for a while was why indexing constraints were not working, then it hit me after a while, plus confirming it from other sources, and me well I had never worked with in memory database before
+   indexes the standard way does not work with it, so had to reorganize the business logic to do an explicity pull and check.
+7) Because of well how i find ember works which is new, i had to use some non standard ways of parsing the response error json to show in the form. I couldnt find a proper source for form validation on ember side.
 
 Dev Environment only swagger
 
