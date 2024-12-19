@@ -3,15 +3,16 @@ I heard you guys work with Ember.js and I kind of tried to make an UI based on e
 
 
 So basically, some of the features that I included are:-
-1) Added JWT based token auth allowing an admin user to login, and this admin would have rights to create/update/delete advisor records.
-2) Anyone could list or view the certain advisor.
-3) The admin user would be seeded and have a password based on setting APEXA_ADMIN_PASSWORD, i've tied it with config, but on production scenario ideally we would set up as env variable or azure key.
+1) Added JWT based token auth allowing an admin user to login, and this admin would have rights to create/update/delete advisor records. This admin is seeded into the database, using  a password set up
+   in config/env variable/azure key.
+3) Anyone could list or view the certain advisor.
+4) The admin user would be seeded and have a password based on setting APEXA_ADMIN_PASSWORD, i've tied it with config, but on production scenario ideally we would set up as env variable or azure key.
    So setting setx APEXA_ADMIN_PASSWORD "Password here"
-4) Also because there is JWT auth, we also need to add a setx APEXA_JWT_KEY "Auth Key", a key to make that auth possible.
-5) I found learning Ember a bit of learning curve as there were a few guides unlike react based on youtube, is a bit quirky for me with me working on mvc.net most of my life, but it took some time for me to get through.
-6) One thing that stumped me for a while was why indexing constraints were not working, then it hit me after a while, plus confirming it from other sources, and me well I had never worked with in memory database before
+5) Also because there is JWT auth, we also need to add a setx APEXA_JWT_KEY "Auth Key", a key to make that auth possible.
+6) I found learning Ember a bit of learning curve as there were a few guides unlike react based on youtube, is a bit quirky for me with me working on mvc.net most of my life, but it took some time for me to get through.
+7) One thing that stumped me for a while was why indexing constraints were not working, then it hit me after a while, plus confirming it from other sources, and me well I had never worked with in memory database before
    indexes the standard way does not work with it, so had to reorganize the business logic to do an explicity pull and check.
-7) Because of well how i find ember works which is new, i had to use some non standard ways of parsing the response error json to show in the form. I couldnt find a proper source for form validation on ember side.
+8) Because of well how i find ember works which is new, i had to use some non standard ways of parsing the response error json to show in the form. I couldnt find a proper source for form validation on ember side.
 
 Dev Environment only swagger
 
