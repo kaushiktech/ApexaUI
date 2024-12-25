@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using NLog.Extensions.Logging;
@@ -33,11 +34,26 @@ builder.Services.AddAuthentication(options =>
      options.RequireHttpsMetadata = false;
      options.TokenValidationParameters = new TokenValidationParameters()
      {
-         ValidIssuer = "localhost",
+         ValidIssuer = "localhost",//Would be replaced with valid issuer in production
          ValidateAudience = false,
          IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(builder.Configuration["APEXA_JWT_KEY"]))
      };
  });
+//Added Global Filter for rate limiting with a failure code of 429, these values making it conservative, but could be changed per requirement
+//This should prevent DDOS attacks from a certain ip.
+builder.Services.AddRateLimiter(rateLimiterOptions =>
+{
+    rateLimiterOptions.RejectionStatusCode = 429;
+    rateLimiterOptions.GlobalLimiter = PartitionedRateLimiter.CreateChained(
+       PartitionedRateLimiter.Create<HttpContext, string>(httpContext =>
+           RateLimitPartition.GetFixedWindowLimiter(httpContext.Connection.RemoteIpAddress.ToString(), partition =>
+               new FixedWindowRateLimiterOptions
+               {
+                   AutoReplenishment = true,
+                   PermitLimit = 10,
+                   Window = TimeSpan.FromSeconds(10)
+               })));
+});
 builder.Services.AddLogging(logging =>
 {
     logging.ClearProviders();
@@ -53,7 +69,6 @@ if (builder.Environment.IsDevelopment())
             policyBuilder => policyBuilder.AllowAnyHeader()
                 .AllowAnyMethod()
                 .AllowAnyOrigin()
-                //.AllowCredentials()
                 .SetIsOriginAllowed(_ => true)
         );
     });
@@ -94,6 +109,7 @@ builder.Services.AddSwaggerGen(option =>
 
 
 var app = builder.Build();
+app.UseRateLimiter();
 //Initializing/seeding a admin user for test purposes
 using (var serviceScope = app.Services.CreateScope())
 {
